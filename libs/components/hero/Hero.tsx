@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="mt-20 mb-10">
         <div>
           <img
-            className="h-32 w-full object-cover lg:h-48"
+            className="h-32 w-full object-cover lg:h-48 rounded"
             src={profile.coverImageUrl.src}
             alt=""
           />
