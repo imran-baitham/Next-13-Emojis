@@ -14,7 +14,7 @@
 
 @layer components {
   .container {
-    @apply max-w-[1280px] w-[calc(100%-3rem)] ml-[1.5rem] mr-[1.5rem] lg:m-auto;
+      @apply max-w-[900px] mx-auto pl-[0.5rem] pr-[0.5rem]
   }
 
   .item-copy {

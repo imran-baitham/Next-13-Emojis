@@ -1,49 +1,49 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
+
+import bgIMG from '../../../public/assets/bg.png'
+import profileIMG from '../../../public/assets/imran.jpeg'
 
 const Hero = () => {
   return (
-    <section className="bg-[url('../public/assets/bg.png')] bg-cover mt-[3.5rem]">
-      <div className="container">
-        <div className="flex flex-col justify-center items-center text-center p-[5rem_2rem]">
-          <div className="text-[28px] font-bold lg:text-[32px] text-[#050505]">
-            OHMOJI
-          </div>
-          <div className="text-[#050505]">
-            A fun and interactive emoji collection website for sharing and
-            copying your favorite emojis.
-          </div>
-          <div className="flex gap-[1.2rem] mt-[1rem]">
-            <a
-              target="_blank"
-              href="https://www.facebook.com/chayutpong.chumneanpongpun/"
-              className="footer_link"
-              rel="noreferrer"
-            >
-              {/* <BsFacebook className="text-[#4267B2]" size={24} /> */}
-              BsFacebook
-            </a>
-            <a
-              target="_blank"
-              href="https://www.instagram.com/ur.ddream"
-              className="footer_link"
-              rel="noreferrer"
-            >
-              {/* <BsInstagram size={24} className="text-[#E1306C] " /> */}
-              BsInstagram
-            </a>
-            <a
-              target="_blank"
-              href="https://github.com/DEATHTINYZ"
-              className="footer_link"
-              rel="noreferrer"
-            >
-              {/* <BsGithub size={24} className="text-[#6E5494] " /> */}BsGithub
-            </a>
+    <>
+      <div className="mt-20 mb-10">
+        <div>
+          <img
+            className="h-32 w-full object-cover lg:h-48"
+            src={profile.coverImageUrl.src}
+            alt=""
+          />
+        </div>
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="-mt-12 sm:-mt-16 sm:flex sm:items-end sm:space-x-5">
+            <div className="flex">
+              <img
+                className="h-24 w-24 rounded-full ring-4 ring-white sm:h-32 sm:w-32"
+                src={profile.imageUrl.src}
+                alt=""
+              />
+            </div>
+            <div className="mt-6 sm:flex sm:min-w-0 sm:flex-1 sm:items-center sm:justify-end sm:space-x-6 sm:pb-1">
+              <div className="mt-6 min-w-0 flex-1 2xl:block">
+                <h1 className="truncate text-2xl font-bold text-gray-900 dark:text-white">
+                  {profile.name}
+                </h1>
+                <p className="text-gray-500 text-sm">{profile.bio}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </>
   )
 }
 
 export default Hero
+
+const profile = {
+  name: 'Imran Baitham',
+  bio: 'Welcome to my emojidb. 😍',
+  imageUrl: profileIMG,
+  coverImageUrl: bgIMG,
+}

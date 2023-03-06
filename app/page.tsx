@@ -5,7 +5,7 @@ import Search from "@/libs/components/search/Search";
 
 export default function Home() {
   return (
-    <main>
+    <main className="container">
       <Navbar />
       <Hero />
       <Search />

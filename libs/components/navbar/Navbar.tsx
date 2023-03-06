@@ -1,7 +1,8 @@
 'use client'
 import { useTheme } from 'next-themes'
+import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-// import { BsFillMoonFill, BsSunFill } from 'react-icons/bs'
+import { ReactIcon } from '../ReactIcon/ReactIcon'
 
 const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme()
@@ -21,8 +22,7 @@ const Navbar = () => {
           className="flex cursor-pointer p-[.5rem] rounded-[50%] hover:bg-[#E4E6EB]"
         >
           <span>
-            {/* <BsFillMoonFill className="dark:text-[#E4E6EB]" /> */}
-            BsFillMoonFill
+            <ReactIcon className='w-5 h-5' icon="RiMoonClearLine" />
           </span>
         </button>
       )
@@ -33,22 +33,21 @@ const Navbar = () => {
           className="flex cursor-pointer p-[.5rem] rounded-[50%] hover:bg-[#65676B]"
         >
           <span>
-            {/* <BsSunFill className="dark:text-[#E4E6EB]" /> */}
-            BsSunFill
+            <ReactIcon className='w-5 h-5' icon="ImSun" />
           </span>
         </button>
       )
     }
   }
   return (
-    <header className="bg-white fixed top-0 left-0 w-full shadow-[0_1px_2px_rgba(0,0,0,0.2)] z-[99] dark:bg-[#18191A]">
-      <nav className="container h-[3.5rem] flex items-center justify-between">
-        <a
+    <header className="fixed top-0 left-0 w-full z-[99]">
+      <nav className="container h-[3.5rem] px-[1rem] flex items-center justify-between rounded mt-2 shadow-[0_1px_2px_rgba(0,0,0,0.2)] bg-white dark:bg-[#18191A]">
+        <Link
           href="/"
-          className="text-[#050505] cursor-pointer dark:text-[#E4E6EB]"
+          className="text-[#050505] cursor-pointer dark:text-[#E4E6EB] font-bold"
         >
-          OHMOJI
-        </a>
+          EMOJIDB
+        </Link>
         {renderThemeChanger()}
       </nav>
     </header>
