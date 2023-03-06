@@ -19,7 +19,6 @@ const ScrollToTopButton = () => {
       className={showScrollTop ? 'scroll_top bottom-[1.5rem]' : 'scroll_top'}
       onClick={scrollTop}
     >
-      {/* <BsArrowUp size={20} className="text-[#18191A] dark:text-[#E4E6EB]" /> */}
       <ReactIcon icon="ImArrowUp2" />
     </a>
   )

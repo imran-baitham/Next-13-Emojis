@@ -280,4 +280,6 @@ export { RiFeedbackLine } from "@react-icons/all-files/ri/RiFeedbackLine";
 export { AiOutlineEyeInvisible } from "@react-icons/all-files/ai/AiOutlineEyeInvisible";
 
 export { ImArrowUp2 } from "@react-icons/all-files/im/ImArrowUp2";
+export { RiCheckboxCircleFill } from "@react-icons/all-files/ri/RiCheckboxCircleFill";
+
 

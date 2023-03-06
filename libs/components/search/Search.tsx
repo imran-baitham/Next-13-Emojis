@@ -19,9 +19,9 @@ const Search = () => {
   useEffect(() => {
     const newData = _.map(EmojiData, (emoji: any, index: any) => ({
       ...emoji,
-      id: index
+      id: index,
     })).filter((emoji: { title: any }) =>
-      _.includes(_.lowerCase(emoji.title), _.lowerCase(search))
+      _.includes(_.lowerCase(emoji.title), _.lowerCase(search)),
     )
     setData(newData)
   }, [search])
@@ -33,9 +33,9 @@ const Search = () => {
         placeholder="Search for a keyword..."
         type="text"
         value={search}
-        onChange={e => setSearch(e.target.value)}
+        onChange={(e) => setSearch(e.target.value)}
       />
-      <div className="grid gap-[2rem] relative sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid gap-[12px] relative grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {_.isEmpty(data) ? (
           <p className="text-center absolute top-0 left-0 right-0 text-#18191A dark:text-#E4E6EB">
             No Results Found

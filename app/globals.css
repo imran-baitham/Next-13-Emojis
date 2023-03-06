@@ -18,7 +18,7 @@
   }
 
   .item-copy {
-    @apply absolute bg-[#0077ff33] rounded-[8px] p-[6px] bottom-[8px] left-[8px] cursor-pointer transition-opacity text-[12px] text-[#0077ff];
+    @apply absolute bottom-[8px] left-[8px] transition-opacity;
   }
 
   .scroll_top {
@@ -26,7 +26,7 @@
   }
 
   .selector {
-    @apply relative h-[196px] flex flex-col gap-[.8rem] cursor-pointer justify-center items-center shadow-[0_1px_2px_rgba(0,0,0,0.2)] bg-white p-[2rem] rounded-[8px] dark:bg-[#18191A];
+    @apply relative flex flex-col gap-[.8rem] cursor-pointer justify-center items-center shadow-[0_1px_2px_rgba(0,0,0,0.2)] bg-white p-[0rem] rounded-[8px] dark:bg-[#18191A];
   }
 }
 
@@ -35,6 +35,7 @@
   --second-color: #3c67e3;
   --third-color: #4e00c2;
 }
+
 @property --rotate {
   syntax: '<angle>';
   initial-value: 132deg;
@@ -66,7 +67,7 @@
   top: -2%;
   left: -2%;
 }
-.selector:hover::after {
+/* .selector:hover::after {
   top: 0;
   left: 0;
   right: 0;
@@ -74,7 +75,7 @@
   width: 100%;
   transform: scale(0.9);
   filter: blur(70px);
-}
+} */
 @keyframes spin {
   0% {
     --rotate: 0deg;
